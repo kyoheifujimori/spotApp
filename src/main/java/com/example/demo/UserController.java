@@ -11,6 +11,9 @@ import com.example.demo.model.User;
 
 @RestController
 public class UserController {
+	//ここにUserNameとPassWordを保存しておく変数をあらかじめ書いておく
+	String UserName = null;
+	String PassWord = null;
 
 	@Autowired
 	UserDataService service;
@@ -18,6 +21,7 @@ public class UserController {
 	@PostMapping("api/user/add")
 	@CrossOrigin
 	public int add(@RequestBody User user) {
+		this.UserName = "kyohei";
 		System.out.println("api/user/add(post)");
 		return service.add(user);
 	}

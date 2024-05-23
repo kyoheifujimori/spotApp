@@ -1,7 +1,5 @@
 package com.example.demo.model;
 
-import java.util.List;
-
 import com.example.demo.data.UserDataInterface;
 
 import jakarta.persistence.Column;
@@ -9,7 +7,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -30,16 +27,16 @@ public class User implements UserDataInterface {
 	@Column(nullable = false)
 	private String Email;
 
-	@OneToMany(mappedBy = "user")
-	private List<Spot> spotDataList;
+	//	@OneToMany(mappedBy = "user")
+	//	private List<Spot> spotDataList;
 
-	public List<Spot> getSpotDataList() {
-		return spotDataList;
-	}
-
-	public void setSpotDataList(List<Spot> spotDataList) {
-		this.spotDataList = spotDataList;
-	}
+	//	public List<Spot> getSpotDataList() {
+	//		return spotDataList;
+	//	}
+	//
+	//	public void setSpotDataList(List<Spot> spotDataList) {
+	//		this.spotDataList = spotDataList;
+	//	}
 
 	public int getUserId() {
 		return UserId;

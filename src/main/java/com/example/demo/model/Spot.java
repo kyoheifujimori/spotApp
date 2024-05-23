@@ -7,8 +7,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -29,31 +27,31 @@ public class Spot implements SpotDataInterface {
 	@Column(nullable = false)
 	private String SpotExplanation;
 
-	@Column(nullable = true)
-	private String SpotPicture;
+	//	@Column(nullable = true)
+	//	private String SpotPicture;
 
-	@Column(updatable = false, insertable = false)
-	private String UserName;
+	//	@Column(updatable = false, insertable = false)
+	//	private int UserId;
+	//
+	//	@ManyToOne
+	//	@JoinColumn(name = "UserId")
+	//	private User user;
 
-	@ManyToOne
-	@JoinColumn(name = "UserName")
-	private User user;
-
-	public String getUserName() {
-		return UserName;
-	}
-
-	public void setUserName(String userName) {
-		UserName = userName;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
+	//	public int getUserId() {
+	//		return UserId;
+	//	}
+	//
+	//	public void setUserId(int userId) {
+	//		UserId = userId;
+	//	}
+	//
+	//	public User getUser() {
+	//		return user;
+	//	}
+	//
+	//	public void setUser(User user) {
+	//		this.user = user;
+	//	}
 
 	public int getSpotId() {
 		return SpotId;
@@ -87,12 +85,12 @@ public class Spot implements SpotDataInterface {
 		SpotExplanation = spotExplanation;
 	}
 
-	public String getSpotPicture() {
-		return SpotPicture;
-	}
-
-	public void setSpotPicture(String spotPicture) {
-		SpotPicture = spotPicture;
-	}
+	//	public String getSpotPicture() {
+	//		return SpotPicture;
+	//	}
+	//
+	//	public void setSpotPicture(String spotPicture) {
+	//		SpotPicture = spotPicture;
+	//	}
 
 }

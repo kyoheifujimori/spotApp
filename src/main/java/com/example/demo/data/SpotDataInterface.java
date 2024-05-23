@@ -23,7 +23,7 @@ public interface SpotDataInterface {
 	public void setSpotExplanation(String spotexplanation);
 
 	//	SpotPictureの設定
-	public String getSpotPicture();
-
-	public void setSpotPicture(String spotpicture);
+	//	public String getSpotPicture();
+	//
+	//	public void setSpotPicture(String spotpicture);
 }

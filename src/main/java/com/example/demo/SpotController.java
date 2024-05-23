@@ -29,9 +29,9 @@ public class SpotController {
 
 	@GetMapping("/api/spot/{id}")
 	@CrossOrigin
-	public SpotDataInterface fruitById(@PathVariable int SpotId) {
+	public SpotDataInterface fruitById(@PathVariable int id) {
 		System.out.println("api/spot/findById");
-		return service.getById(SpotId);
+		return service.getById(id);
 	}
 
 	@PostMapping("api/spot/add")
